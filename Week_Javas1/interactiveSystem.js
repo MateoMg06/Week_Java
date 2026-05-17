@@ -23,7 +23,7 @@ while (IsTrue) {
     IsTrue = false;
   }
   else {
-    IsTrue = false
+    IsTrue = true
   }
   
 }
