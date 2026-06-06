@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - CRUD con JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app">
+        <section class="panel">
+            <div class="heading">
+                <p class="eyebrow">Modulo 3 - Week 4</p>
+                <h1>Inventario CRUD</h1>
+            </div>
+
+            <form id="productForm" class="product-form">
+                <input type="hidden" id="productId">
+
+                <label for="productName">Producto</label>
+                <input id="productName" type="text" placeholder="Nombre del producto">
+
+                <label for="productPrice">Precio</label>
+                <input id="productPrice" type="number" min="1" step="0.01" placeholder="Precio">
+
+                <label for="productCategory">Categoria</label>
+                <input id="productCategory" type="text" placeholder="Categoria">
+
+                <label for="productDescription">Descripcion</label>
+                <textarea id="productDescription" rows="3" placeholder="Descripcion breve"></textarea>
+
+                <div class="actions">
+                    <button type="submit" id="saveButton">Agregar producto</button>
+                    <button type="button" id="cancelButton" class="secondary" hidden>Cancelar</button>
+                    <button type="button" id="syncButton" class="secondary">Sincronizar API</button>
+                </div>
+            </form>
+
+            <p id="messageBox" class="message" role="status"></p>
+        </section>
+
+        <section class="panel list-panel">
+            <div class="list-header">
+                <h2>Productos</h2>
+                <span id="counter">0 productos</span>
+            </div>
+
+            <ul id="productList" class="product-list"></ul>
+
+            <details class="storage-panel">
+                <summary>Local Storage</summary>
+                <pre id="storagePreview"></pre>
+            </details>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
